@@ -26,18 +26,10 @@ exports.handler = async (event) => {
     `,
   };
 
-  try {
-    const info = await transporter.sendMail(mailOptions);
+  const info = await transporter.sendMail(mailOptions);
 
-    return {
-      statusCode: 200,
-      body: "Your data has been successfully sent!",
-    };
-  } catch (error) {
-    console.error("Error sending email:", error);
-    return {
-      statusCode: 500,
-      body: "An error occurred!",
-    };
-  }
+  return {
+    statusCode: 200,
+    body: "Your data has been successfully sent!",
+  };
 };
