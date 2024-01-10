@@ -9,9 +9,14 @@ import { FormattedMessage, useIntl } from "react-intl";
 interface IProps {
   useFormInstance: UseFormReturn<IContact>;
   onSubmit: (data: IContact) => void;
+  disabled: boolean;
 }
 
-const ContactForm: React.FC<IProps> = ({ useFormInstance, onSubmit }) => {
+const ContactForm: React.FC<IProps> = ({
+  useFormInstance,
+  onSubmit,
+  disabled,
+}) => {
   const intl = useIntl();
 
   const {
@@ -77,7 +82,7 @@ const ContactForm: React.FC<IProps> = ({ useFormInstance, onSubmit }) => {
         )}
       />
 
-      <Button type="submit">
+      <Button type="submit" disabled={disabled}>
         <FormattedMessage id="CONTACT_WITH_ME" />
       </Button>
     </form>

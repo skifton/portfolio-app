@@ -11,7 +11,7 @@ import { useSendEmail } from "../../services/sendEmail.service";
 const ContactSection: React.FC = () => {
   const intl = useIntl();
 
-  const { mutate: sendEmail } = useSendEmail();
+  const { mutate: sendEmail, isPending } = useSendEmail();
 
   const ContactFormSchema = yup.object().shape({
     name: yup
@@ -59,7 +59,11 @@ const ContactSection: React.FC = () => {
         </div>
       </div>
       <div className="flex-1 items-center flex w-full">
-        <ContactForm useFormInstance={useFormReturn} onSubmit={onSubmit} />
+        <ContactForm
+          useFormInstance={useFormReturn}
+          onSubmit={onSubmit}
+          disabled={isPending}
+        />
       </div>
     </section>
   );

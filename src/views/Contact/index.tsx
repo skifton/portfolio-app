@@ -13,7 +13,7 @@ import { IDetailContact } from "../../models/contact.model";
 const Contact: React.FC = () => {
   const intl = useIntl();
 
-  const { mutate: sendEmail } = useSendEmail();
+  const { mutate: sendEmail, isPending } = useSendEmail();
 
   const ContactFormSchema = yup.object().shape({
     name: yup
@@ -110,7 +110,11 @@ const Contact: React.FC = () => {
             </motion.div>
           </div>
 
-          <ContactForm ReturnFormInstance={useFormReturn} onSubmit={onSubmit} />
+          <ContactForm
+            ReturnFormInstance={useFormReturn}
+            onSubmit={onSubmit}
+            disabled={isPending}
+          />
         </div>
       </main>
     </>
