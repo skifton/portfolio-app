@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import WelcomeSection from "./WelcomeSection";
 import AboutSection from "./AboutSection";
 import SkillsSection from "./SkillsSection";
@@ -9,6 +9,8 @@ import { useIntl } from "react-intl";
 
 const Main: React.FC = () => {
   const intl = useIntl();
+
+  useEffect(() => window.scrollTo(0, 0), []);
 
   return (
     <>

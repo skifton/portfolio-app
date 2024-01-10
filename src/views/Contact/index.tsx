@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as yup from "yup";
 import { Helmet } from "react-helmet-async";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -48,6 +48,8 @@ const Contact: React.FC = () => {
   const onSubmit = (data: IDetailContact) => {
     sendEmail(data);
   };
+
+  useEffect(() => window.scrollTo(0, 0), []);
 
   return (
     <>

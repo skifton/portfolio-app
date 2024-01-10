@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 import { projects } from "../../data/projects";
@@ -7,6 +7,8 @@ import FadeInOnScroll from "../../components/FadeInOnScroll";
 
 const Projects: React.FC = () => {
   const intl = useIntl();
+
+  useEffect(() => window.scrollTo(0, 0), []);
 
   return (
     <>

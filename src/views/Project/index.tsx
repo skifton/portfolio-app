@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaAngleDown } from "react-icons/fa";
@@ -14,6 +14,8 @@ const Project: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();
 
   const project = projects.find((project) => project.id === +projectId!);
+
+  useEffect(() => window.scrollTo(0, 0), []);
 
   return (
     <>

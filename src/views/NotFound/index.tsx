@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../../components/Form/Button";
 import { ROUTES } from "../../routes/routes";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -7,6 +7,8 @@ import { Helmet } from "react-helmet-async";
 
 const NotFound: React.FC = () => {
   const intl = useIntl();
+
+  useEffect(() => window.scrollTo(0, 0), []);
 
   return (
     <>
