@@ -18,6 +18,7 @@ const RouteWrapper: React.FC = () => {
         <Route path={ROUTES.projects} element={<Projects />} />
         <Route path={ROUTES.project} element={<Project />} />
         <Route path={ROUTES.contact} element={<Contact />} />
+        <Route path={ROUTES.not_found} element={<NotFound />} />
         <Route path={ROUTES.default} element={<NotFound />} />
       </Route>
     </Routes>
