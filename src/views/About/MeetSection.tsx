@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FormattedMessage } from "react-intl";
-import Avatar from "../../assets/avatar-with-bg.png";
+import Avatar from "../../assets/avatar-with-bg.jpg";
 
 const MeetSection: React.FC = () => {
   return (

@@ -5,7 +5,7 @@ import { SOCIALS } from "../../data/socials";
 import Button from "../Form/Button";
 import { ROUTES } from "../../routes/routes";
 import FadeInOnScroll from "../FadeInOnScroll";
-import Avatar from "../../assets/avatar-with-bg.png";
+import Avatar from "../../assets/avatar-with-bg.jpg";
 
 const Footer: React.FC = () => {
   const intl = useIntl();
